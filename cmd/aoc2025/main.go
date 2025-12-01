@@ -41,10 +41,13 @@ func main() {
 			}
 			fmt.Println(ans)
 		case 2:
-			// placeholder for part 2
-			fmt.Println("day1 part2 not implemented yet")
+			ans, err := day01.Part2(lines)
+			if err != nil {
+				log.Fatalf("day1 part2 error: %v", err)
+			}
+			fmt.Println(ans)
 		default:
-			log.Fatalf("unsupported part %d", *part)
+			log.Fatalf("unsupported part %d for day 1", *part)
 		}
 	default:
 		log.Fatalf("unsupported day %d", *day)
