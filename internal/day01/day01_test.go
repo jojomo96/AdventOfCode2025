@@ -39,6 +39,6 @@ func TestPart1_BasicWrapping(t *testing.T) {
 		t.Fatalf("Part1 returned error: %v", err)
 	}
 	if got != 2 {
-		t.Fatalf("Part1() = %d, want 2", got, 2)
+		t.Fatalf("Part1() = %d, want %d", got, 2)
 	}
 }
