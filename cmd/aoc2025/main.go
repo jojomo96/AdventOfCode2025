@@ -8,6 +8,7 @@ import (
 	"os"
 
 	"AdventOfCode2025/internal/day01"
+	"AdventOfCode2025/internal/day02"
 )
 
 func main() {
@@ -48,6 +49,23 @@ func main() {
 			fmt.Println(ans)
 		default:
 			log.Fatalf("unsupported part %d for day 1", *part)
+		}
+	case 2:
+		switch *part {
+		case 1:
+			ans, err := day02.Part1(lines)
+			if err != nil {
+				log.Fatalf("day2 part1 error: %v", err)
+			}
+			fmt.Println(ans)
+		case 2:
+			ans, err := day02.Part2(lines)
+			if err != nil {
+				log.Fatalf("day2 part2 error: %v", err)
+			}
+			fmt.Println(ans)
+		default:
+			log.Fatalf("unsupported part %d for day 2", *part)
 		}
 	default:
 		log.Fatalf("unsupported day %d", *day)
